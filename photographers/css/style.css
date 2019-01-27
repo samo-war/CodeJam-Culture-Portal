@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 100px;
-    width: 45%;
+    width: 50%;
 }
 .photographer-info{
     display: flex;
@@ -24,11 +24,11 @@
     justify-content: space-between;
 }
 .gallery{
-    width: 80%;
+    width: 70%;
 }
 
 .carousel img{
-    height: 400px;
+    max-height: 400px;
 }
 
 #timeline{
@@ -66,10 +66,6 @@
     animation-name: animatetop;
     animation-duration: 0.4s
 }
-.map{
- 
-}
-
 #mapid { 
     height: 480px;
     z-index: 0; 
@@ -81,6 +77,9 @@
 .divider{
     border-bottom: 1px solid rgba(0,0,0,0.2);
     padding-bottom: 30px;
+}
+.text-mask{
+    background-color: rgba(0,0,0,0.5);
 }
 
 
