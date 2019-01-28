@@ -5,35 +5,7 @@ Primary style
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  
-  /* html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-size: 1.6rem;
-    font-family: "Droid Serif", serif;
-    color: #7f8c97;
-    background-color: #e9f0f5;
-  }
-  
-  a {
-    color: #acb7c0;
-    text-decoration: none;
-  }
-  
-  img {
-    max-width: 100%;
-  }
-  
-  h1, h2 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-  } */
-  
-  /* -------------------------------- 
-  Patterns - reusable parts of our design
-  -------------------------------- */
+
   .timeline p{
     font-size: 1.6rem;
     font-family: "Droid Serif", serif;
