@@ -16,6 +16,8 @@
   <link href="home-page/css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="home-page/css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="home-page/img/сamera-icon.png">
+  <script src="https://unpkg.com/i18next/i18next.js"></script>
   <style>
     html,
     body,
@@ -40,7 +42,7 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
       <a href="#" class="navbar-menu waves-effect ml-3 mr-3">
-        <strong class="blue-text">Photographers directory</strong>
+        <strong class="blue-text" id="header__photographers">Photographers directory</strong>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
       data-target="#navbarContent" aria-controls="navbarContent" 
@@ -50,26 +52,26 @@
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link waves-effect">Home</a>
+            <a href="#" class="nav-link waves-effect" id="header__home">Home</a>
           </li>
           <li class="nav-item">
-            <a href="search-page/" class="nav-link waves-effect">Search</a>
+            <a href="search-page/" class="nav-link waves-effect" id="header__search">Search</a>
           </li>
         </ul>
         <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item">
             <a href="#" class="nav-link waves-effect">
-              <span class="clearfix d-sm-inline-block">EN</span>
+              <span class="clearfix d-sm-inline-block" onclick="i18next.changeLanguage('en')">EN</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link waves-effect">
-              <span class="clearfix d-sm-inline-block">RU</span>
+              <span class="clearfix d-sm-inline-block" onclick="i18next.changeLanguage('ru')">RU</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link waves-effect">
-              <span class="clearfix d-sm-inline-block">BE</span>
+              <span class="clearfix d-sm-inline-block" onclick="i18next.changeLanguage('be')">BE</span>
             </a>
           </li>
         </ul>
@@ -91,9 +93,9 @@
           justify-content-center align-items-center">
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>Photographers directory</strong>
+                <strong class="carousel__photographers-js">Photographers directory</strong>
               </h1>
-              <a href="search-page/" class="btn btn-outline-white btn-lg">Search photographers</a>
+              <a href="search-page/" class="btn btn-outline-white btn-lg carousel__search-js">Search photographers</a>
             </div>
           </div>
         </div>
@@ -105,9 +107,9 @@
           justify-content-center align-items-center">
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>Photographers directory</strong>
+                <strong class="carousel__photographers-js">Photographers directory</strong>
               </h1>
-              <a href="search-page/" class="btn btn-outline-white btn-lg">Search photographers</a>
+              <a href="search-page/" class="btn btn-outline-white btn-lg carousel__search-js">Search photographers</a>
             </div>
           </div>
         </div>
@@ -119,9 +121,9 @@
           justify-content-center align-items-center">
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
-                <strong>Photographers directory</strong>
+                <strong class="carousel__photographers-js">Photographers directory</strong>
               </h1>
-              <a href="search-page/" class="btn btn-outline-white btn-lg">Search photographers</a>
+              <a href="search-page/" class="btn btn-outline-white btn-lg carousel__search-js">Search photographers</a>
             </div>
           </div>
         </div>
@@ -141,14 +143,14 @@
       </div>
       <div class="grid-item grid-item-2 wow fadeIn d-flex justify-content-center 
       align-items-flex-end">
-        <a href="#" class="btn btn-warning btn-rounded waves-effect btn-lg mb-5">This day's photographer</a>
+        <a href="#" class="btn btn-warning btn-rounded waves-effect btn-lg mb-5" id="thisDayPhotographer">This day's photographer</a>
       </div>
       <div class="grid-item grid-item-3 wow fadeIn">
       </div>
       <div class="grid-item grid-item-4 wow fadeIn p-4 justify-content-center 
       align-items-center">
         <h2>
-          <span><strong>This unique database of profiles of Belarusian photographers 
+          <span><strong id="portal-info">This is unique database of profiles of Belarussian photographers 
           with the ability to search by their name or place of birth. 
           All profiles contain biographical data, photographs, video 
           materials and a map on which the most significant places for 
@@ -160,7 +162,7 @@
       </div>
       <div class="grid-item grid-item-6 wow fadeIn justify-content-center 
       align-items-center white-text">
-        <h2>Portal created by students of <span>The Rolling Scope School</span></h2>
+        <h2 id="students-RSS">Portal was created by students of The Rolling Scopes School</h2>
       </div>
       <div class="grid-item grid-item-7 wow fadeIn justify-content-center 
       align-items-flex-end">
@@ -207,7 +209,7 @@
 
   <footer class="page-footer text-center font-small wow fadeIn">
     <div class="pt-4">
-      <a href="#" class="btn btn-outline-white" role="button">Up</a>
+      <a href="#" class="btn btn-outline-white" role="button" id="up">Up</a>
     </div>
     <hr class="my-4">
     <div class="pb-4">
@@ -219,7 +221,7 @@
       </a>
     </div>
     <div class="footer-copyright py-3">
-      <p>&copy;RSS 2019 Group28 <i class="fa fa-graduation-cap ml-2"></i></p>
+      <p id="group">&copy;RSS 2019 Group28 <i class="fa fa-graduation-cap ml-2"></i></p>
     </div>
   </footer>
 
@@ -235,6 +237,8 @@
   <script>
     new WOW().init();
   </script>
+  <!-- Translation script -->
+  <script src="./home-page/js/translate.js"></script>
 </body>
 
 </html>
